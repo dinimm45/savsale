@@ -8,6 +8,7 @@
  *  3-3- Appending cards every time data changes v
  * 4- Display Image v
  * 5- Re-arrange elements v
+ * 6- Store products images on firebase storage
  *
  *  => git clone <repo_url>
  *  => git push [branch_name]
@@ -75,7 +76,7 @@ const DEFAULT_DELETE_TIMEOUT = 0;
     if (isRightChoiceSelected) {
       alert("please select right ");
     }
-    
+
     collectArea.value = "";
 
     return;
