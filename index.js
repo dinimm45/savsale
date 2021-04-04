@@ -8,6 +8,10 @@
  *  3-3- Appending cards every time data changes v
  * 4- Display Image v
  * 5- Re-arrange elements v
+ * 
+ *  => git clone <repo_url>
+ *  => git push [branch_name]
+ *  => git pull
  */
 
 var cardsData = [];
