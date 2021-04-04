@@ -8,7 +8,7 @@
  *  3-3- Appending cards every time data changes v
  * 4- Display Image v
  * 5- Re-arrange elements v
- * 
+ *
  *  => git clone <repo_url>
  *  => git push [branch_name]
  *  => git pull
@@ -48,7 +48,7 @@ const DEFAULT_DELETE_TIMEOUT = 0;
     if (!cardData) return;
 
     const key = await createProduct(cardData);
-    cardsData.push({...cardData, key});
+    cardsData.push({ ...cardData, key });
   }
 
   function renderCards() {
@@ -62,20 +62,23 @@ const DEFAULT_DELETE_TIMEOUT = 0;
     }
   }
 
-  function resetforrm(){
-    var proudctName = (document.getElementById("productName").value = "");
-    var descripe = (document.getElementById("txtarea").value = "");
-    var firstName = (document.getElementById("fname").value = "");
-    var lastName = (document.getElementById("lname").value = "");
-    var collectArea = (document.getElementById("collctid").value = "");
-    var phonnmbr = (document.getElementById("phnmbr").value = "");
+  function resetforrm() {
+    document.getElementById("productName").value = "";
+    document.getElementById("txtarea").value = "";
+    document.getElementById("fname").value = "";
+    document.getElementById("lname").value = "";
+    var collectArea = document.getElementById("collctid");
+    document.getElementById("phnmbr").value = "";
 
-    if (collectArea!="B-2" || "B-3" ){
-      alert ("please select right ")
+    var validChoices = ["B-2", "B-3"];
+    var isRightChoiceSelected = validChoices.includes(collectArea.value);
+    if (isRightChoiceSelected) {
+      alert("please select right ");
     }
-    return;
-
     
+    collectArea.value = "";
+
+    return;
   }
 
   async function handleAddButtonClick() {
