@@ -13,89 +13,90 @@
 
 <body>
   <h1></h1>
-  <header>
-    <nav>
-      <div class="topnav">
-        <div id="myLinks">
-          <a href="#news">News</a>
-          <a href="#contact">Contact US</a>
-          <a href="#contact">Collect Destination</a>
-          <a href="#about">About</a>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    </nav>
-  </header>
+  <image src="images/savsale.jpg" style="width: 150px; position: relative; left: 10%; top: 2%;"></image>
+  <div class="topnav" id="myTopnav">
+    <div class="logo"></div>
+    <a href="#home" class="active"></a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="dropDown()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  
+  <script>
+  function dropDown() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
 
   <div class="CenterMiddle">
-<!-- størrelse 230px-->
-    <image src="icon80.png" style="width: 110px;"></image>
+    <!-- størrelse 230px-->
+        
+        
+      </div>
     
+      
     
-  </div>
-
-  
-
-  <div class="imageContainer"> 
-   
-    <!--<div class="top-left" style="margin-left: 3%; margin-right:3%;"><h2 style="font-size: 60px;">  A step from something great</h2</div> -->
-  
-  </div>
-
-  
-  </div>
+      <div class="imageContainer"> 
+       
+        <div class="top-left" style="margin-left: 3%; margin-right:3%;"><h2 style="font-size: 60px;">  Small steps can make a big difference</h2</div> 
+      
+      </div>
 
   <br></br>
-
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
-    }
-  </script>
 
   <!--resten-->
 
 
   
-    <form class="container" action="index.html" method="post">
-      <input id="productImage" name="productImage" type="file" />
-      <label style="font-size:20px;">Product</label>
-      <form action="/action_page.php">
-        <br>
-        <label for="productName">Name of the product:</label><br>
-        <input type="text" id="productName" name="productName" value=""><br>
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value="" /><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value=""><br>
-        <label for="lname">Collect Destination:</label><br>
-        <input type="text" id="collctid" name="lname" value=""><br>
-        <!--collecting areas will be named after us-->
-        <label for="lname">Phone number</label><br>
-        <a href="Click here to know about collecting areas"></a>
-        <input type="text" id="phnmbr" name="lname" value=""><br>
-        <label for="lname">Description</label><br>
-        <input id="txtarea" class="inputText"><br></br>
-        <button type="button" class="addbtn" id="btnadd">Add</button>
-      </form>
+  <form class="container" action="index.html" method="post">
+    <input id="productImage" name="productImage" type="file" />
+    <form action="/action_page.php">
+      <br>
+      <label for="productName">Name of the product:</label><br>
+      <input type="text" id="productName" name="productName" value=""><br>
+      <label for="price">Price:</label><br>
+      <input type="number" id="price" name="price" value="" /><br>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="" /><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value=""><br>
+      <label for="lname">Collect Destination:</label><br>
+      <input type="text" id="collctid" name="lname" value=""><br>
+      <!--collecting areas will be named after us-->
+      <label for="lname">Phone number</label><br>
+      <a href="Click here to know about collecting areas"></a>
+      <input type="text" id="phnmbr" name="lname" value=""><br>
+      <label for="lname">Description</label><br>
+      <input id="txtarea" class="inputText"><br></br>
+      <button type="button" class="addbtn" id="btnadd">Add</button>
     </form>
+  </form>
+  
+  </div>
+
+  <br></br>
 
     <div class="textAndBttns">
 
       <h2 style="margin-left: 7%; font: inherit; font-size: 30px;">Catogories</h2>
+      <input class="" type="text" id="srchbar" placeholder="What are you looking for?" title="Type in a name"  style="position: relative; align-content: center;
+      background-color: white; width: 400px; height: 35px; border-radius: 25px; left: 32%; margin-bottom: 25px;">  </input> 
+      <button class="searchBtnn">Search</button>
+      <br></br>
     <Button class="CatogoriButtn"> <img src="images/clothes.png" class="imgClass"> <p style="color: white;">Clothes</p></Button>
     <Button class="CatogoriButtn"><img src="images/elctronn.png" class="imgClass"> <p style="color: white;">Electronic</p></Button>
     <Button class="CatogoriButtn"><img src="images/sofa.png" class="imgClass"> <p style="color: white;">Home</p> </Button>
     <Button class="CatogoriButtn"><img src="images/viewall.png" class="imgClass"> <p style="color: white;">Show all</p> </Button>
-    <h2 id="section-title" style="margin-left: 7%; font: inherit; font-size: 30px;">Recent Items for </h2>
-
+    <h2 id="section-title" style="margin-left: 7%; font: inherit; font-size: 30px;">Recent Items for sale </h2>
+    
      <!--recent-->
 
      <div class="cardblokkdiv">
@@ -124,6 +125,20 @@
     </section> -->
 
   </main>
+
+</main>
+<h1></h1>
+<div class="footer">
+  <a href="Contact us" style="color: black;">Contact us</a>
+  <br> </br>
+  <a href="Contact us" style="color: black;">About us</a>
+  <br> </br>
+  <a href="Contact us" style="color: black;">Collect areas</a>
+  <br> </br>
+  <a href="Contact us" style="color: black;">About collect areas</a>
+  <br> </br>
+  <a href="Contact us" style="color: black;">How to buy and sell</a>
+</div>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>

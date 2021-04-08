@@ -9,6 +9,8 @@
  * 4- Display Image v
  * 5- Re-arrange elements v
  * 6- Store products images on firebase storage
+ *   6-1- check images size
+ *   6-2- multiple images per product
  *
  *  => git clone <repo_url>
  *  => git push [branch_name]
