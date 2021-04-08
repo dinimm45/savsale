@@ -8,9 +8,11 @@
  *  3-3- Appending cards every time data changes v
  * 4- Display Image v
  * 5- Re-arrange elements v
- * 6- Store products images on firebase storage
- *   6-1- check images size
- *   6-2- multiple images per product
+ * 6- Store products images on firebase storage *
+ *   6-1- check images size x
+ *   6-2- multiple images per product v
+ *   6-3- fetch images by url
+ * 7- reverse products order
  *
  *  => git clone <repo_url>
  *  => git push [branch_name]
@@ -32,7 +34,7 @@ const DEFAULT_DELETE_TIMEOUT = 0;
     var lastName = document.getElementById("lname").value;
     var collectArea = document.getElementById("collctid").value;
     var phonnmbr = document.getElementById("phnmbr").value;
-    var img = document.getElementById("productImage").files[0];
+    var images = document.getElementById("productImage").files;
 
     return {
       proudctName,
@@ -41,9 +43,7 @@ const DEFAULT_DELETE_TIMEOUT = 0;
       lastName,
       collectArea,
       phonnmbr,
-      img: img
-        ? window.URL.createObjectURL(img)
-        : "https://source.unsplash.com/random",
+      images: images
     };
   }
 
