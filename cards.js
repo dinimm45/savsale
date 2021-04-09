@@ -7,9 +7,10 @@
       lastName,
       collectArea,
       phonnmbr,
-      img,
+      images,
       key,
     } = cardData;
+    const [firstImage] = images;
 
     var hostElement = document.createElement("div");
     hostElement.setAttribute("class", "card");
@@ -18,7 +19,7 @@
     var imgElememt = document.createElement("img");
     imgElememt.setAttribute("id", "prdcimg");
     imgElememt.setAttribute("alt", "your image");
-    imgElememt.src = img;
+    imgElememt.src = firstImage;
 
     var nameElement = document.createElement("h2");
     nameElement.setAttribute("id", "Nameofprdc");

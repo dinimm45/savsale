@@ -8,12 +8,18 @@
 
     // Write the new post's data simultaneously in the posts list and the user's post list.
     var updates = {};
-    updates["/products/" + newProductKey] = productData;
+
+    const images = await uploadImages(productData.images, newProductKey);
+
+    updates["/products/" + newProductKey] = { ...productData, images };
 
     await databaseRef.update(updates);
-    await uploadImages(productData.images, newProductKey);
 
-    return newProductKey;
+    return {
+      ...productData,
+      key: newProductKey,
+      images,
+    };
   }
 
   async function fetchProducts() {
@@ -61,8 +67,16 @@
     }
 
     const results = await Promise.all(promises);
+    const imagesUrlsPromises = results.map((result) =>
+      result.ref.getDownloadURL()
+    );
+    const imagesUrls = await Promise.all(imagesUrlsPromises);
 
-    return results;
+    console.log(
+      "TCL ~ file: data-services.js ~ line 66 ~ uploadImages ~ imagesUrls",
+      imagesUrls
+    );
+    return imagesUrls;
   }
 
   // async function

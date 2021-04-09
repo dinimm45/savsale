@@ -50,8 +50,8 @@ const DEFAULT_DELETE_TIMEOUT = 0;
   async function storeData(cardData) {
     if (!cardData) return;
 
-    const key = await createProduct(cardData);
-    cardsData.push({ ...cardData, key });
+    const productData = await createProduct(cardData);
+    cardsData.push(productData);
   }
 
   function renderCards() {
