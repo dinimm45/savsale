@@ -1,4 +1,3 @@
-
 h1 {
   border-top: 5px solid #f8690b;
 }
@@ -40,7 +39,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
@@ -48,7 +49,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -61,7 +64,6 @@ body {
   }
 }
 
-
 .addbtn {
   background-color: #f8690b;
   border: none;
@@ -70,7 +72,6 @@ body {
   height: 42px;
   width: 250px;
   position: flex;
-  
 }
 
 .cardbtn {
@@ -109,19 +110,17 @@ article {
 
 /*bacground på knappen*/
 
-
 section#cardarticle {
   display: flex;
   flex-basis: 270px;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
   margin-right: 3%;
 }
 
 .container {
   margin-top: 3%;
   position: flex;
-  top:11%;
+  top: 11%;
   margin-left: 10%;
   margin-right: 10%;
   max-width: 300px;
@@ -129,13 +128,12 @@ section#cardarticle {
   padding: 16px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
-  
 }
 
 .imageContainer {
-  display:flex;
-  width:100%; 
-  height:530px; 
+  display: flex;
+  width: 100%;
+  height: 530px;
   background-image: url(images/elctr.jpeg);
 }
 
@@ -147,27 +145,23 @@ section#cardarticle {
   color: #ffffff;
 }
 
-.CatogoriButtn{
+.CatogoriButtn {
   border-radius: 50px;
   background: #f8690b;
   width: 90px;
   height: 90px;
   border: none;
-  margin-left:40px;
-  margin-right:20px;
+  margin-left: 40px;
+  margin-right: 20px;
   position: relative;
   left: 25%;
 
-  
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
 
-  background-color:#f8690b;
-  
-
-
+  background-color: #f8690b;
 }
 
 .imgClass {
@@ -179,18 +173,12 @@ section#cardarticle {
 .CenterMiddle {
   margin-left: 10%;
   margin-right: 10%;
-
-
 }
 
-.textAndBttns{
-
-  
+.textAndBttns {
   margin-bottom: 80%;
-  margin-left:40px;
-  margin-right:20px;
-  
-
+  margin-left: 40px;
+  margin-right: 20px;
 }
 
 .footer {
@@ -204,29 +192,88 @@ section#cardarticle {
 }
 
 .searchBtnn {
-  position: relative; 
-  left: 440px; 
-  top: 40%; 
-  width: 90px; 
-  height: 30px; 
-  border-radius: 25px; 
-  font-size: medium; 
-  background-color: #f8690b; 
-  color: white; 
+  position: relative;
+  left: 440px;
+  top: 40%;
+  width: 90px;
+  height: 30px;
+  border-radius: 25px;
+  font-size: medium;
+  background-color: #f8690b;
+  color: white;
   border: none;
 }
 
-.searchBar{
-
-  position: relative; 
+.searchBar {
+  position: relative;
   align-content: center;
-  background-color: white; 
-  width: 400px; 
-  height: 35px; 
-  border-radius: 25px; 
-  left: 32%; 
+  background-color: white;
+  width: 400px;
+  height: 35px;
+  border-radius: 25px;
+  left: 32%;
   margin-bottom: 25px;
   display: flex;
-
-
 }
+
+button.CatogoriButtn.view-all {
+  background-image: url(images/viewall.png);
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  padding: 2.6em 0 0;
+  color: white;
+  outline: none;
+}
+
+button.CatogoriButtn.home-category {
+  background-image: url(images/Sofa.png);
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  padding: 2.6em 0 0;
+  color: white;
+  outline: none;
+}
+
+button.CatogoriButtn.electronics-category {
+  background-image: url(images/elctronn.png);
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  padding: 2.6em 0 0;
+  color: white;
+  outline: none;
+}
+
+button.CatogoriButtn.clothing-category {
+  background-image: url(images/clothes.png);
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  padding: 2.6em 0 0;
+  color: white;
+  outline: none;
+}
+
+button.CatogoriButtn.clothing-category:hover {
+  cursor: pointer;
+  background-color: #F89900;
+  }
+
+  button.CatogoriButtn.electronics-category:hover {
+    cursor: pointer;
+    background-color: #F89900;
+    }
+
+    button.CatogoriButtn.home-category:hover {
+      cursor: pointer;
+      background-color: #F89900;
+      }
+
+      button.CatogoriButtn.view-all:hover {
+        cursor: pointer;
+        background-color: #F89900;
+        }
+    
+  

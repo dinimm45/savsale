@@ -70,6 +70,13 @@
       <input type="text" id="lname" name="lname" value=""><br>
       <label for="lname">Collect Destination:</label><br>
       <input type="text" id="collctid" name="lname" value=""><br>
+      <label for="category">Category:</label><br>
+      <select id="category" name="category">
+        <option value="home">Home</option>
+        <option value="clothing">Clothing</option>
+        <option value="electronics">Electronics</option>
+      </select>
+      <br>
       <!--collecting areas will be named after us-->
       <label for="lname">Phone number</label><br>
       <a href="Click here to know about collecting areas"></a>
@@ -91,10 +98,10 @@
       background-color: white; width: 400px; height: 35px; border-radius: 25px; left: 32%; margin-bottom: 25px;">  </input> 
       <button class="searchBtnn">Search</button>
       <br></br>
-    <Button class="CatogoriButtn"> <img src="images/clothes.png" class="imgClass"> <p style="color: white;">Clothes</p></Button>
-    <Button class="CatogoriButtn"><img src="images/elctronn.png" class="imgClass"> <p style="color: white;">Electronic</p></Button>
-    <Button class="CatogoriButtn"><img src="images/sofa.png" class="imgClass"> <p style="color: white;">Home</p> </Button>
-    <Button class="CatogoriButtn"><img src="images/viewall.png" class="imgClass"> <p style="color: white;">Show all</p> </Button>
+    <Button class="CatogoriButtn clothing-category" data-category="clothing"> Clothes</Button>
+    <Button class="CatogoriButtn electronics-category" data-category="electronics">Electronic</p></Button>
+    <Button class="CatogoriButtn home-category" data-category="home">Home</p> </Button>
+    <Button class="CatogoriButtn view-all" data-category=""> Show all </Button>
     <h2 id="section-title" style="margin-left: 7%; font: inherit; font-size: 30px;">Recent Items for sale </h2>
     
      <!--recent-->

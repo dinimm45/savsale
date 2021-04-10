@@ -22,10 +22,11 @@
     };
   }
 
-  async function fetchProducts() {
+  async function fetchProducts(category) {
     var products = [];
     var data = await databaseRef
       .child("products")
+      .orderByChild("date")
       .once("value", (data) => data);
     data.forEach((item) => {
       const { key } = item;
@@ -34,15 +35,15 @@
         ...item.val(),
       };
 
-      products.push(product);
-      // if (!category) {
-      //   return;
-      // }
+      if (!category) {
+        products.push(product);
+        return;
+      }
 
-      // if (category && product.category === category) products.push(product);
+      if (category && product.category === category) products.push(product);
     });
 
-    return products;
+    return products.reverse();
   }
 
   async function removeProductByKey(key) {

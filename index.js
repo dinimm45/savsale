@@ -11,8 +11,9 @@
  * 6- Store products images on firebase storage *
  *   6-1- check images size x
  *   6-2- multiple images per product v
- *   6-3- fetch images by url
- * 7- reverse products order
+ *   6-3- fetch images by url v
+ * 7- reverse products order v
+ * 8- filter products by category
  *
  *  => git clone <repo_url>
  *  => git push [branch_name]
@@ -34,6 +35,8 @@ const DEFAULT_DELETE_TIMEOUT = 0;
     var lastName = document.getElementById("lname").value;
     var collectArea = document.getElementById("collctid").value;
     var phonnmbr = document.getElementById("phnmbr").value;
+    var price = document.getElementById("price").value;
+    var category = document.getElementById("category").value;
     var images = document.getElementById("productImage").files;
 
     return {
@@ -43,7 +46,10 @@ const DEFAULT_DELETE_TIMEOUT = 0;
       lastName,
       collectArea,
       phonnmbr,
-      images: images
+      images: images,
+      price,
+      date: new Date().getTime(),
+      category,
     };
   }
 
@@ -65,11 +71,18 @@ const DEFAULT_DELETE_TIMEOUT = 0;
     }
   }
 
+  async function renderCardsByCategory(category) {
+    cardsData = await fetchProducts(category);
+
+    renderCards();
+  }
+
   function resetforrm() {
     document.getElementById("productName").value = "";
     document.getElementById("txtarea").value = "";
     document.getElementById("fname").value = "";
     document.getElementById("lname").value = "";
+    document.getElementById("price").value = "";
     var collectArea = document.getElementById("collctid");
     document.getElementById("phnmbr").value = "";
 
@@ -91,6 +104,12 @@ const DEFAULT_DELETE_TIMEOUT = 0;
     resetforrm();
   }
 
+  async function handleCategoryChange(event) {
+    const category = event.target.getAttribute("data-category");
+
+    await renderCardsByCategory(category);
+  }
+
   async function start() {
     cardsData = await fetchProducts();
 
@@ -102,6 +121,11 @@ const DEFAULT_DELETE_TIMEOUT = 0;
 
     await removeProductByKey(key);
   }
+
+  const categoryButtons = document.querySelectorAll("button.CatogoriButtn[data-category]");
+  Array.from(categoryButtons).forEach((button) => {
+    button.addEventListener("click", handleCategoryChange, false);
+  });
 
   cardsArea.addEventListener("card-remove", handleCardRemoval);
   window.addEventListener("load", start);

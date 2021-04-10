@@ -9,8 +9,9 @@
       phonnmbr,
       images,
       key,
+      price,
     } = cardData;
-    const [firstImage] = images;
+    const [firstImage = "https://picsum.photos/200"] = images || [];
 
     var hostElement = document.createElement("div");
     hostElement.setAttribute("class", "card");
@@ -29,6 +30,10 @@
     var firstNameElement = document.createElement("h6");
     firstNameElement.setAttribute("id", "firstName");
     firstNameElement.innerText = "Name: " + firstName;
+
+    var priceElement = document.createElement("h6");
+    priceElement.setAttribute("id", "price");
+    priceElement.innerText = "Price : " + price;
 
     var lastNameElement = document.createElement("h6");
     lastNameElement.setAttribute("id", "lastName");
@@ -65,6 +70,7 @@
     hostElement.appendChild(areaElement);
     hostElement.appendChild(nbrElement);
     hostElement.appendChild(descriptionElement);
+    hostElement.appendChild(priceElement);
 
     if (deleteTimeout && deleteTimeout > 0) {
       setTimeout(selfDestroy, deleteTimeout);
