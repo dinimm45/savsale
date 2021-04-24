@@ -51,26 +51,92 @@
     descriptionElement.setAttribute("id", "description");
     descriptionElement.innerText = descripe;
 
+    function resetform(){
+      var buyerName=document.getElementById("buyerName").value="";
+      var buyerLastName=document.getElementById("Blname").value="";
+      var buyerphn=document.getElementById("phNmbr").value="";
+      var buyerCollectArea=document.getElementById("buyerCollectArea").value="";
+
+    }
+    
+
+    function buyerDb(){
+      var database= firebase.database();// først setter vi oss inn i databasen
+      alert("Thank you for buying this product");
+      var buyerName=document.getElementById("buyerName").value;
+      var buyerLastName=document.getElementById("Blname").value;
+      var buyerphn=document.getElementById("phNmbr").value;
+      var buyerCollectArea=document.getElementById("buyerCollectArea").value;
+
+      var ref = database.ref().child('Sold').push().child("productname")//så lager vi en referanse i databasen
+      ref.push("Price " + price);
+      ref.push("ProductName " + proudctName);
+      ref.push("BuyerName " + buyerName);
+      ref.push("buyerLastName " + buyerLastName);
+      ref.push("BuyerPhone " + buyerphn);
+      ref.push("BuyerCollectArea " + buyerCollectArea);     
+      document.getElementById("overlay").style.display = "none"; 
+      
+    }
+
+
+    //buyer database 
+    function buyerDatabase(){
+      var buybtn=document.getElementById("buy");
+      var cancelBtn=document.getElementById("cancel");
+      document.getElementById("overlay").style.display = "block";
+
+      cancelBtn.addEventListener("click",function(){
+        document.getElementById("overlay").style.display = "none";
+        alert(buyerName);
+      });
+
+      buybtn.addEventListener("click",function(){
+       
+        resetform();
+        buyerDb();
+
+        return false;
+
+      });
+
+      var Amountbuyclickd=0;
+      var buyclick=firebase.database().ref("AmountbuyClick").child("Buy clicks");
+      buyclick.transaction(function(Amountbuyclickd){
+        return Amountbuyclickd + 1;
+      });
+
+    }
+    //until here
+
     function selfDestroy() {
       const deleteEvent = new Event("card-remove", { bubbles: true });
       hostElement.dispatchEvent(deleteEvent);
       hostElement.parentElement.removeChild(hostElement);
     }
 
+    //buyer database button
+    var buyButtonElement=document.createElement("button");
+    buyButtonElement.setAttribute("id", "buyButton");
+    buyButtonElement.addEventListener("click",buyerDatabase);
+    buyButtonElement.innerText="Buy";
+
+    //Delete button
     var deleteButtonElement = document.createElement("button");
     deleteButtonElement.setAttribute("id", "deleteButton");
     deleteButtonElement.addEventListener("click", selfDestroy);
     deleteButtonElement.innerText = "x";
 
+    hostElement.appendChild(buyButtonElement);
     hostElement.appendChild(deleteButtonElement);
     hostElement.appendChild(imgElememt);
+    hostElement.appendChild(priceElement);
     hostElement.appendChild(nameElement);
     hostElement.appendChild(firstNameElement);
     hostElement.appendChild(lastNameElement);
     hostElement.appendChild(areaElement);
     hostElement.appendChild(nbrElement);
     hostElement.appendChild(descriptionElement);
-    hostElement.appendChild(priceElement);
 
     if (deleteTimeout && deleteTimeout > 0) {
       setTimeout(selfDestroy, deleteTimeout);
