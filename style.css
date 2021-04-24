@@ -275,5 +275,55 @@ button.CatogoriButtn.clothing-category:hover {
         cursor: pointer;
         background-color: #F89900;
         }
+
+        #overlay {
+          position: fixed;
+          display: none;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.856);
+          z-index: 2;
+          cursor: pointer;
+        }
+        
+        .buyerclass{
+          position: relative;
+          left: 40%;
+          top: 40%;
+          margin-top: 20px;
+         
+        }
+        
+        .buybtn{
+          position: relative;
+          background-color: #f8690b;
+          border: none;
+          color: white;
+          border-radius: 8px;
+          height: 22px;
+          width: 150px;
+          position: flex;
+          margin-top: 25px;
+          margin-left: 15px;
+          align-content: flex-end;
+          right: 3%;
+        
+        
+        }
+        
+        .inputbuyer{
+          position: relative;
+          width: 250px;
+          height: 25px;
+          color:black; border-radius: 25px;
+          align-content: center;
+          
+        
+        
+        }
     
   
