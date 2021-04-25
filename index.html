@@ -57,33 +57,25 @@
 
   
   <form class="container" action="index.html" method="post">
-    <input id="productImage" name="productImage" type="file" multiple />
-    <form action="/action_page.php">
+    <input id="productImage" name="productImage" type="file" />
+    <form >
       <br>
-      <label for="productName">Name of the product:</label><br>
-      <input type="text" id="productName" name="productName" value=""><br>
-      <label for="price">Price:</label><br>
-      <input type="number" id="price" name="price" value="" /><br>
-      <label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname" value="" /><br>
-      <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname" value=""><br>
-      <label for="lname">Collect Destination:</label><br>
-      <input type="text" id="collctid" name="lname" value=""><br>
-      <label for="category">Category:</label><br>
-      <select id="category" name="category">
-        <option value="home">Home</option>
-        <option value="clothing">Clothing</option>
-        <option value="electronics">Electronics</option>
-      </select>
-      <br>
+      <input placeholder="First name" type="text" id="fname" name="fname" value="" /><br> </br>
+      <input placeholder="Last name" type="text" id="lname" name="lname" value="" required><br> </br>
+      <input placeholder="Product name" type="text" id="productName" name="productName" value=""><br></br>
+      <input placeholder="Price" type="number" id="price" name="price" value="" /><br></br>
+      <label for="collect">Collect Destination:</label> <br>
+      <select name="collect" id="collctid" style="width: 150px;"><br>
+        <option value="B.1">b.1</option>
+        <option value="b.2">b.2</option>
+        <option value="b.3">b.3</option>
+        <option value="b.4">b.4</option>
+      </select><br></br>
       <!--collecting areas will be named after us-->
-      <label for="lname">Phone number</label><br>
       <a href="Click here to know about collecting areas"></a>
-      <input type="text" id="phnmbr" name="lname" value=""><br>
-      <label for="lname">Description</label><br>
-      <input id="txtarea" class="inputText"><br></br>
-      <button type="button" class="addbtn" id="btnadd">Add</button>
+      <input placeholder="Phone number" type="phone" id="phnmbr" name="lname" value="" required><br></br>
+      <input placeholder="Descripe your product" id="txtarea" class="inputText"><br></br>
+      <button type="button" class="addbtn" id="btnadd" >Ready for sale</button>
     </form>
   </form>
   

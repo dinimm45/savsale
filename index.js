@@ -14,7 +14,10 @@
  *   6-3- fetch images by url v
  * 7- reverse products order v
  * 8- filter products by category
- *
+ * 9- Make image larger onclick
+ * 10-Disable button when form is not filled
+ * 11-fix search
+ * 12-Slide through pictures
  *  => git clone <repo_url>
  *  => git push [branch_name]
  *  => git pull
@@ -29,14 +32,13 @@ const DEFAULT_DELETE_TIMEOUT = 0;
   var cardsArea = document.getElementById("cardarticle");
 
   function gatherData() {
+    var price = document.getElementById("price").value;
     var proudctName = document.getElementById("productName").value;
     var descripe = document.getElementById("txtarea").value;
     var firstName = document.getElementById("fname").value;
     var lastName = document.getElementById("lname").value;
     var collectArea = document.getElementById("collctid").value;
     var phonnmbr = document.getElementById("phnmbr").value;
-    var price = document.getElementById("price").value;
-    var category = document.getElementById("category").value;
     var images = document.getElementById("productImage").files;
 
     return {
@@ -49,7 +51,7 @@ const DEFAULT_DELETE_TIMEOUT = 0;
       images: images,
       price,
       date: new Date().getTime(),
-      category,
+      
     };
   }
 
