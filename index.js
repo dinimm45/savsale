@@ -13,7 +13,7 @@
  *   6-2- multiple images per product v
  *   6-3- fetch images by url v
  * 7- reverse products order v
- * 8- filter products by category
+ * 8- filter products by category v
  * 9- Make image larger onclick
  * 10-Disable button when form is not filled
  * 11-fix search
@@ -39,6 +39,7 @@ const DEFAULT_DELETE_TIMEOUT = 0;
     var lastName = document.getElementById("lname").value;
     var collectArea = document.getElementById("collctid").value;
     var phonnmbr = document.getElementById("phnmbr").value;
+    var category = document.getElementById("category").value;
     var images = document.getElementById("productImage").files;
 
     return {
@@ -51,6 +52,7 @@ const DEFAULT_DELETE_TIMEOUT = 0;
       images: images,
       price,
       date: new Date().getTime(),
+      category,
       
     };
   }
@@ -73,6 +75,39 @@ const DEFAULT_DELETE_TIMEOUT = 0;
     }
   }
 
+  //Search and hide unrevelent cards
+
+  function searchCards(){
+
+    var input,filter,cards,cardContainer,title, i;
+    
+    input = document.getElementById("srchbar");
+    filter=input.value.toUpperCase();
+    cardContainer =document.getElementById("cardarticle");
+    cards=cardContainer.getElementsByClassName("card");
+    for (i=0; i < cards.length; i++) {
+      title=cards[i].querySelector(".cardTitle");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1){
+        cards[i].style.display= "";
+      }else{
+        cards[i].style.display="none"
+      }
+    }
+  };
+
+  function searchByTitle(){
+    var searchbtn=document.getElementById("srchBtnn");
+    searchbtn.addEventListener("click",function(){
+      searchCards();
+      
+    });
+  };
+
+  searchByTitle();
+  
+  
+  //RenderCardByCatagory
+  
   async function renderCardsByCategory(category) {
     cardsData = await fetchProducts(category);
 
