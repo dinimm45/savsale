@@ -16,7 +16,7 @@
  * 8- filter products by category v
  * 9- Make image larger onclick
  * 10-Disable button when form is not filled
- * 11-fix search v
+ * 11-fix search
  * 12-Slide through pictures
  *  => git clone <repo_url>
  *  => git push [branch_name]
@@ -115,29 +115,30 @@ const DEFAULT_DELETE_TIMEOUT = 0;
   }
 
   function resetforrm() {
-    document.getElementById("productName").value = "";
+    prdcNme =document.getElementById("productName").value = "";
     document.getElementById("txtarea").value = "";
     document.getElementById("fname").value = "";
     document.getElementById("lname").value = "";
     document.getElementById("price").value = "";
-    var collectArea = document.getElementById("collctid");
     document.getElementById("phnmbr").value = "";
 
-    var validChoices = ["B-2", "B-3"];
-    var isRightChoiceSelected = validChoices.includes(collectArea.value);
-    if (isRightChoiceSelected) {
-      alert("please select right ");
-    }
-
-    collectArea.value = "";
-
-    return;
   }
 
+
+
   async function handleAddButtonClick() {
+    prdcNme =document.getElementById("productName").value;
+    
+//prevent empty fields
+    if(prdcNme.length == 0 ) { 
+      alert("fill the form")
+  return false;
+  } else {
     var newCard = gatherData();
     await storeData(newCard);
     renderCards();
+  }
+   
     resetforrm();
   }
 
