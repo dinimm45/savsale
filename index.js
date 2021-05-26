@@ -16,7 +16,7 @@
  * 8- filter products by category v
  * 9- Make image larger onclick
  * 10-Disable button when form is not filled
- * 11-fix search
+ * 11-fix search v
  * 12-Slide through pictures
  *  => git clone <repo_url>
  *  => git push [branch_name]
