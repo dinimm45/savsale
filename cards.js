@@ -52,6 +52,7 @@
     descriptionElement.innerText = descripe;
 
     function resetform(){
+      //not relevant for now
       var buyerName=document.getElementById("buyerName").value="";
       var buyerLastName=document.getElementById("Blname").value="";
       var buyerphn=document.getElementById("phNmbr").value="";
@@ -69,12 +70,12 @@
       var buyerCollectArea=document.getElementById("buyerCollectArea").value;
 
       var ref = database.ref().child('Sold').push().child("productname")//så lager vi en referanse i databasen
-      ref.push("Price " + price);
-      ref.push("ProductName " + proudctName);
-      ref.push("BuyerName " + buyerName);
-      ref.push("buyerLastName " + buyerLastName);
-      ref.push("BuyerPhone " + buyerphn);
-      ref.push("BuyerCollectArea " + buyerCollectArea);     
+      ref.push("Price: " + price);
+      ref.push("ProductName: " + proudctName);
+      ref.push("BuyerName: " + buyerName);
+      ref.push("buyerLastName: " + buyerLastName);
+      ref.push("BuyerPhone: " + buyerphn);
+      ref.push("BuyerCollectArea: " + buyerCollectArea);     
       document.getElementById("overlay").style.display = "none"; 
       
     }
@@ -92,8 +93,6 @@
       });
 
       buybtn.addEventListener("click",function(){
-       
-        resetform();
         buyerDb();
 
         return false;
