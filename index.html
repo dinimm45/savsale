@@ -36,18 +36,12 @@
     }
   }
   </script>
-
-  <div class="CenterMiddle">
-    <!-- størrelse 230px-->
-        
-        
-      </div>
     
       
     
       <div class="imageContainer"> 
        
-        <div class="top-left" style="margin-left: 3%; margin-right:3%;"> <h2 style="font-size: 60px;">  savsale</h2</div> 
+        <div class="top-left"> <h2 class="h2txt" style="font-size: 60px; ">  Smile there's better days ahead</h2</div> 
       
       </div>
 
@@ -82,30 +76,44 @@
       <!--collecting areas will be named after us-->
       <a href="Click here to know about collecting areas"></a>
       <input placeholder="Phone number" type="text" id="phnmbr" name="lname" value=""><br></br>
-      <input class="input" id="txtarea" class="inputText" placeholder="Descripe your product" style="height: 45px;"><br></br>
+      <input class="input" rows="8" id="txtarea" class="inputText" placeholder="Descripe your product" style="height: 45px;"><br></br>
       <button type="button" class="addbtn" id="btnadd">Ready for sale</button>
     </form>
   </form>
-  
+
 
   
   </div>
 
   <br></br>
 
-    <div class="textAndBttns">
+ 
+    <!-- størrelse 230px-->
+        
+    <!-- <div class="textAndBttns"> -->
 
       <h2 style="margin-left: 7%; font: inherit; font-size: 30px;">Catogories</h2>
-      <input class="" type="text" id="srchbar" placeholder="What are you looking for?" title="Type in a name"  style="position: relative; align-content: center;
-      background-color: white; width: 400px; height: 35px; border-radius: 25px; left: 32%; margin-bottom: 25px;">  </input> 
-      <button id="srchBtnn" class="searchBtnn">Search</button>
+
+      <div class="flex-container">
+        <Button class="CatogoriButtn clothing-category" data-category="clothing"> Clothes</Button>
+        <Button class="CatogoriButtn electronics-category" data-category="electronics">Electronic</Button>
+        <Button class="CatogoriButtn home-category" data-category="home">Home</Button>
+        <Button class="CatogoriButtn view-all" data-category=""> Show all</Button>
+          </div>
+          
       <br></br>
-    <Button class="CatogoriButtn clothing-category" data-category="clothing"> Clothes</Button>
-    <Button class="CatogoriButtn electronics-category" data-category="electronics">Electronic</p></Button>
-    <Button class="CatogoriButtn home-category" data-category="home">Home</p> </Button>
-    <Button class="CatogoriButtn view-all" data-category=""> Show all </Button>
+
+    <div class="flex-containersrch">
+      
+      <input class="flex-itemsrch flex-shrink-1 searchBar" type="text" id="srchbar" placeholder="What are you looking for?" title="Type in a name">  </input> 
+      <button id="srchBtnn" class=" flex-itemsrch flex-shrink-1 searchBtnn">Search</button>
+    </div>
+
     <h2 id="section-title" style="margin-left: 7%; font: inherit; font-size: 30px;">Recent Items for sale </h2>
     
+    
+    
+    <div class="CenterMiddle">
      <!--recent-->
 
      <div class="cardblokkdiv">
@@ -113,6 +121,8 @@
       <section id="cardarticle"> </section>
       
     </div>
+
+    <!-- </div> -->
     </div>
 
 
