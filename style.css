@@ -64,6 +64,15 @@ body {
   }
 } 
 
+/*after certain size the text will dissappear*/
+
+@media screen and (max-width: 700px) {
+  .h2txt {
+    display: none;
+  }
+}
+
+
 .addbtn {
   background-color: #f8690b;
   border: none;
@@ -131,7 +140,7 @@ section#cardarticle {
   margin-left: 10%;
   margin-right: 10%;
   max-width: 300px;
-  height: 395px;
+  height: 67%;
   padding: 16px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
@@ -140,8 +149,8 @@ section#cardarticle {
 .imageContainer {
   display: flex;
   width: 100%;
-  height: 530px;
-  background-image: url(images/elctr.jpeg);
+  height: 610px;
+  background-image: url(images/wallppr.jpeg);
 }
 
 .top-left {
@@ -150,6 +159,25 @@ section#cardarticle {
   top: 200px;
   left: 460px;
   color: #ffffff;
+  margin-left: 3%; 
+  margin-right:3%;
+  font-size: 60px; 
+  color: #f8690b;
+  font-size: 60px;
+  
+}
+
+.srchbtnstyle
+{
+  position: relative; 
+  align-content: center;
+  background-color: white; 
+  width: 400px; height: 35px; 
+  border-radius: 25px; left: 32%; 
+  margin-bottom: 25px;
+  display: flex;
+
+
 }
 
 .CatogoriButtn {
@@ -158,12 +186,12 @@ section#cardarticle {
   width: 90px;
   height: 90px;
   border: none;
-  margin-left: 40px;
   margin-right: 20px;
+  margin-top: 20px;
   position: relative;
   left: 25%;
 
-  text-align: center;
+  margin-left: 10px;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -171,21 +199,44 @@ section#cardarticle {
   background-color: #f8690b;
 }
 
-.imgClass {
-  width: 40px;
-  height: 50px;
-  color: #ffffff;
-}
 
 .CenterMiddle {
   margin-left: 10%;
   margin-right: 10%;
+  display: flex;
+  padding: 20px;
+	flex-wrap: nowrap;
+  
+}
+
+.flex-item {
+  padding: 20px;
+  color: white;
+}
+
+.flex-itemsrch{
+  flex: 0 1 auto; 
+
 }
 
 .textAndBttns {
   margin-bottom: 80%;
-  margin-left: 40px;
+  margin-left: 50px;
   margin-right: 20px;
+  margin-top: 100px;
+  padding: 20px;
+  
+}
+
+.flex-container {
+  background-color: #001f3f;
+  display: flex;
+  padding-right: 75px;
+  text-align: center;
+  
+
+
+
 }
 
 .footer {
@@ -200,8 +251,6 @@ section#cardarticle {
 
 .searchBtnn {
   position: relative;
-  left: 440px;
-  top: 40%;
   width: 90px;
   height: 30px;
   border-radius: 25px;
@@ -209,28 +258,41 @@ section#cardarticle {
   background-color: #f8690b;
   color: white;
   border: none;
+  left: 2%;
+  margin-left: 10px;
 }
+
+.flex-containersrch{
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100px;
+
+}
+
+.flex-shrink-1 {
+	flex-shrink: 3;}
 
 .searchBar {
   position: relative;
-  align-content: center;
+  text-align: center;
   background-color: white;
-  width: 400px;
+  width: 350px;
   height: 35px;
   border-radius: 25px;
-  left: 32%;
-  margin-bottom: 25px;
-  display: flex;
+  margin-bottom: 50px;
+  left: 25%;
+  
 }
 
 button.CatogoriButtn.view-all {
   background-image: url(images/viewall.png);
-  background-size: 50px 50px;
+  background-size: 80px 80px;
   background-repeat: no-repeat;
   background-position: center 0;
   padding: 2.6em 0 0;
   color: white;
   outline: none;
+  flex-shrink: 0 1 auto;;
 }
 
 button.CatogoriButtn.home-category {
