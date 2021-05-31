@@ -78,9 +78,9 @@ const DEFAULT_DELETE_TIMEOUT = 0;
   //Search and hide unrevelent cards
 
   function searchCards(){
-
-    var input,filter,cards,cardContainer,title, i;
     
+    var input,filter,cards,cardContainer,title, i;
+    document.getElementById("nosrchresult").style.display="none";
     input = document.getElementById("srchbar");
     filter=input.value.toUpperCase();
     cardContainer =document.getElementById("cardarticle");
@@ -91,6 +91,7 @@ const DEFAULT_DELETE_TIMEOUT = 0;
         cards[i].style.display= "";
       }else{
         cards[i].style.display="none"
+        document.getElementById("nosrchresult").style.display="block";
       }
     }
   };
@@ -102,7 +103,8 @@ const DEFAULT_DELETE_TIMEOUT = 0;
       
     });
   };
-
+  
+  searchCards();
   searchByTitle();
   
   
