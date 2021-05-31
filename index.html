@@ -14,7 +14,7 @@
 
 <body>
   <h1></h1>
-  <image src="images/savsale.jpg" style="width: 150px; position: relative; left: 10%; top: 2%;"></image>
+  <image src="images/savsale.jpg" style="width: 150px; position: relative; left: 10%; top: 5%;"></image>
   <div class="topnav" id="myTopnav">
     <div class="logo"></div>
     <a href="#home" class="active"></a>
@@ -41,7 +41,7 @@
     
       <div class="imageContainer"> 
        
-        <div class="top-left"> <h2 class="h2txt" style="font-size: 60px; ">  Smile there's better days ahead</h2</div> 
+        <div class="top-left"> <h2 class="h2txt" style="font-size: 70px; ">  Smile there's better days ahead</h2</div> 
       
       </div>
 
@@ -92,7 +92,13 @@
         
     <!-- <div class="textAndBttns"> -->
 
-      <h2 style="margin-left: 7%; font: inherit; font-size: 30px;">Catogories</h2>
+      <div class="flex-containersrch">
+      
+        <input class="searchBar" type="text" id="srchbar" placeholder="What are you looking for?" title="Type in a name">  </input> 
+        <button id="srchBtnn" class=" flex-itemsrch flex-shrink-1 searchBtnn">Search</button>
+      </div>
+
+      <h2 style="margin-left: 14%; font: inherit; font-size: 30px;">Catogories</h2>
 
       <div class="flex-container">
         <Button class="CatogoriButtn clothing-category" data-category="clothing"> Clothes</Button>
@@ -100,22 +106,18 @@
         <Button class="CatogoriButtn home-category" data-category="home">Home</Button>
         <Button class="CatogoriButtn view-all" data-category=""> Show all</Button>
           </div>
-          
+
       <br></br>
 
-    <div class="flex-containersrch">
-      
-      <input class="flex-itemsrch flex-shrink-1 searchBar" type="text" id="srchbar" placeholder="What are you looking for?" title="Type in a name">  </input> 
-      <button id="srchBtnn" class=" flex-itemsrch flex-shrink-1 searchBtnn">Search</button>
-    </div>
-
-    <h2 id="section-title" style="margin-left: 7%; font: inherit; font-size: 30px;">Recent Items for sale </h2>
+    <h2 id="section-title" style="margin-left: 14%; font: inherit; font-size: 30px;">Recent Items for sale </h2>
     
     
     
     <div class="CenterMiddle">
      <!--recent-->
-
+     <div id="nosrchresult">
+      <h3>Theres no result of the product you are looking for</h3>
+    </div>
      <div class="cardblokkdiv">
        <!--section can be used to hide the card-->
       <section id="cardarticle"> </section>
@@ -125,39 +127,41 @@
     <!-- </div> -->
     </div>
 
-
-
-    <!-- 
-        <article>
-          <h2 class="cardTitle">Item for sale</h3>
-          <p >
-            I'm baby sriracha hot chicken mixtape pabst organic air …
-          </p>
-          <button class="cardbtn">Complete</button>
-        </article>
-        <article>
-          <h2 class="cardTitle">Todotitle</h3>
-          <p >
-            I'm baby sriracha hot chicken mixtape pabst organic air …
-          </p>
-          <button class="cardbtn">Complete</button>
-    </article>
-    </section> -->
-
-  </main>
-
-</main>
 <h1></h1>
+
 <div class="footer">
-  <a href="Contact us" style="color: black;">Contact us</a>
-  <br> </br>
-  <a href="Contact us" style="color: black;">About us</a>
-  <br> </br>
-  <a href="Contact us" style="color: black;">Collect areas</a>
-  <br> </br>
-  <a href="Contact us" style="color: black;">About collect areas</a>
-  <br> </br>
-  <a href="Contact us" style="color: black;">How to buy and sell</a>
+
+  
+   
+    <ul >
+      <h4>About</h4>
+      <li class="li"><a href="http://scanfcode.com/category/c-language/">About us</a></li>
+      <li class="li"><a href="http://scanfcode.com/category/front-end-development/">Savsale</a></li>
+      <li class="li"><a href="http://scanfcode.com/category/back-end-development/">Something</a></li>
+    </ul>
+  
+ 
+  <ul >
+    <h4>Security</h4>
+    <li class="li"><a href="http://scanfcode.com/category/c-language/">Scam</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/front-end-development/">Calls</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/back-end-development/">Users</a></li>
+  </ul>
+
+  <ul >
+    <h4>Sell</h4>
+    <li class="li"><a href="http://scanfcode.com/category/c-language/">How to sell</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/front-end-development/">How does</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/back-end-development/">somethin</a></li>
+  </ul>
+
+  <ul >
+    <h4>Buy</h4>
+    <li class="li"><a href="http://scanfcode.com/category/c-language/">How to buy</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/front-end-development/">Where do i get</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/back-end-development/">Payment</a></li>
+  </ul>
+  
 </div>
 
  <!--overlay text-->
