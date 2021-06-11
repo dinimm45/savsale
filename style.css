@@ -240,6 +240,7 @@ section#cardarticle {
   text-align: center;
   width: auto;
   margin-left: 40px;
+  bottom: 5%;
 
 }
 
@@ -255,6 +256,12 @@ section#cardarticle {
   flex-grow: 1;
 }
 
+.litxt{
+  color: #f8690b;
+  text-decoration:none;
+
+}
+
 .li{
 
   width: 100%;
@@ -267,7 +274,7 @@ section#cardarticle {
 }
 
 .searchBtnn {
-  margin-top: 50px;
+  margin-top: 53px;
   position: relative;
   width: 80px;
   height: 40px;
@@ -276,7 +283,7 @@ section#cardarticle {
   background-color: #f8690b;
   color: white;
   border: none;
-  left: 25%;
+  left: 24%;
   margin-left: 30px;
   text-align: center;
 }
@@ -304,6 +311,21 @@ section#cardarticle {
   left: 25%;
   
 }
+
+.reset {
+  margin-top: 55px;
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  border-radius: 25px;
+  font-size: medium;
+  background-color: #f86a0b;
+  color: white;
+  border: none;
+  right: 71%;
+}
+
+
 
 button.CatogoriButtn.view-all {
   background-image: url(images/viewall.png);
@@ -365,6 +387,11 @@ button.CatogoriButtn.clothing-category:hover {
         background-color: #F89900;
         }
 
+        button.reset.undobtn:hover{
+          cursor: pointer;
+        background-color: #F89900;
+        }
+
         #overlay {
           position: fixed;
           display: none;
@@ -414,5 +441,13 @@ button.CatogoriButtn.clothing-category:hover {
         
         
         }
+
+        .copyright-text
+{
+  margin:0
+  
+}
+
+
     
   
