@@ -1,4 +1,5 @@
 <html lang="no">
+  <h1></h1>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +10,11 @@
   <title>Savsale</title>
   <link href="style.css" rel="stylesheet" />
   <link href="card.css" rel="stylesheet" />
+
+  <script data-ad-client="ca-pub-2814687957475757" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
-
 <body>
-  <h1></h1>
   <image src="images/savsale.jpg" style="width: 150px; position: relative; left: 10%; top: 5%;"></image>
   <div class="topnav" id="myTopnav">
     <div class="logo"></div>
@@ -57,7 +58,7 @@
       <br></br>
        <input placeholder="First name" type="text" id="fname" name="fname" value="" required /><br> </br>
       <input placeholder="Last name" type="text" id="lname" name="lname" value="" required><br> </br>
-      <input placeholder="Product name" type="text" id="productName" name="productName" value=""><br></br>
+      <input placeholder="Product name" required="required"  type="text" id="productName" name="productName" value=""><br></br>
       <input placeholder="Price" type="number" id="price" name="price" value="" /><br>
       <label for="cars">Collect Destination:</label> <br>
       <select name="cars" id="collctid" style="width: 150px;"><br>
@@ -96,6 +97,8 @@
       
         <input class="searchBar" type="text" id="srchbar" placeholder="What are you looking for?" title="Type in a name">  </input> 
         <button id="srchBtnn" class=" flex-itemsrch flex-shrink-1 searchBtnn">Search</button>
+        <Button class="reset undobtn" id="resetbtn"> X </Button>
+
       </div>
 
       <h2 style="margin-left: 14%; font: inherit; font-size: 30px;">Catogories</h2>
@@ -115,7 +118,7 @@
     
     <div class="CenterMiddle">
      <!--recent-->
-     <div id="nosrchresult">
+     <div id="nosrchresult" style="display: none;">
       <h3>Theres no result of the product you are looking for</h3>
     </div>
      <div class="cardblokkdiv">
@@ -135,32 +138,36 @@
    
     <ul >
       <h4>About</h4>
-      <li class="li"><a href="http://scanfcode.com/category/c-language/">About us</a></li>
-      <li class="li"><a href="http://scanfcode.com/category/front-end-development/">Savsale</a></li>
-      <li class="li"><a href="http://scanfcode.com/category/back-end-development/">Something</a></li>
+      <li class="li" style="color: #f8690b;"><a href="http://scanfcode.com/category/c-language/" class="litxt" >About us</a></li>
+      <li class="li"><a href="http://scanfcode.com/category/front-end-development/" class="litxt">Savsale</a></li>
+      <li class="li"><a href="http://scanfcode.com/category/back-end-development/" class="litxt">Something</a></li>
     </ul>
   
  
   <ul >
     <h4>Security</h4>
-    <li class="li"><a href="http://scanfcode.com/category/c-language/">Scam</a></li>
-    <li class="li"><a href="http://scanfcode.com/category/front-end-development/">Calls</a></li>
-    <li class="li"><a href="http://scanfcode.com/category/back-end-development/">Users</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/c-language/" class="litxt">Scam</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/front-end-development/" class="litxt">Calls</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/back-end-development/" class="litxt">Users</a></li>
   </ul>
 
   <ul >
     <h4>Sell</h4>
-    <li class="li"><a href="http://scanfcode.com/category/c-language/">How to sell</a></li>
-    <li class="li"><a href="http://scanfcode.com/category/front-end-development/">How does</a></li>
-    <li class="li"><a href="http://scanfcode.com/category/back-end-development/">somethin</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/c-language/" class="litxt">How to sell</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/front-end-development/" class="litxt">How does</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/back-end-development/" class="litxt">somethin</a></li>
   </ul>
 
   <ul >
     <h4>Buy</h4>
-    <li class="li"><a href="http://scanfcode.com/category/c-language/">How to buy</a></li>
-    <li class="li"><a href="http://scanfcode.com/category/front-end-development/">Where do i get</a></li>
-    <li class="li"><a href="http://scanfcode.com/category/back-end-development/">Payment</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/c-language/" class="litxt">How to buy</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/front-end-development/" class="litxt">Where do i get</a></li>
+    <li class="li"><a href="http://scanfcode.com/category/back-end-development/" class="litxt">Payment</a></li>
   </ul>
+
+  <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+    <a href="#">Savsale</a>.
+       </p>
   
 </div>
 
