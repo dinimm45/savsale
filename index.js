@@ -102,6 +102,8 @@ const DEFAULT_DELETE_TIMEOUT = 0;
     var searchbtn=document.getElementById("srchBtnn");
     searchbtn.addEventListener("click",function(){
       searchCards();
+      document.getElementById('Itemsale').scrollIntoView();
+
       
     });
   };
@@ -112,6 +114,7 @@ const DEFAULT_DELETE_TIMEOUT = 0;
     document.getElementById("resetbtn").addEventListener("click",function(){
       document.getElementById("srchbar").value="";
       renderCards();
+      document.getElementById('Itemsale').scrollIntoView();
     });
   };
 

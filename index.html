@@ -15,13 +15,13 @@
 </head>
 
 <body>
-  <image src="images/savsale.jpg" style="width: 150px; position: relative; left: 10%; top: 5%;"></image>
+  <image src="images/savsale.jpg" style="width: 150px; position: relative; left: 13%; bottom: 2%;"></image>
   <div class="topnav" id="myTopnav">
     <div class="logo"></div>
     <a href="#home" class="active"></a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+    <a href="#news">Suaal & Jawaab</a>
+    <a href="#contact">Nala xiriir</a>
+    <a href="#about">Nagu saabsan</a>
     <a href="javascript:void(0);" class="icon" onclick="dropDown()">
       <i class="fa fa-bars"></i>
     </a>
@@ -42,7 +42,7 @@
     
       <div class="imageContainer"> 
        
-        <div class="top-left"> <h2 class="h2txt" style="font-size: 70px; ">  Smile there's better days ahead</h2</div> 
+        <div class="top-left"> <h2 class="h2txt" style="font-size: 70px; ">  Nagu aamin adeegaaga</h2</div> 
       
       </div>
 
@@ -56,29 +56,29 @@
     <input id="productImage" name="productImage" type="file" multiple />
     <form action="/action_page.php">
       <br></br>
-       <input placeholder="First name" type="text" id="fname" name="fname" value="" required /><br> </br>
-      <input placeholder="Last name" type="text" id="lname" name="lname" value="" required><br> </br>
-      <input placeholder="Product name" required="required"  type="text" id="productName" name="productName" value=""><br></br>
-      <input placeholder="Price" type="number" id="price" name="price" value="" /><br>
-      <label for="cars">Collect Destination:</label> <br>
+       <input placeholder="Magacaaga" type="text" id="fname" name="fname" value="" required />
+      <input placeholder="Magaca labaad" type="text" id="lname" name="lname" value="" required>
+      <input placeholder="Alaabta magaceeda" required="required"  type="text" id="productName" name="productName" value="">
+      <input placeholder="Qiimaha ku iibineeyso" type="number" id="price" name="price" value="" /><br>
+      <label for="cars">Meesha laga heli karo:</label> <br>
       <select name="cars" id="collctid" style="width: 150px;"><br>
-        <option value="B.1">b.1</option>
-        <option value="b.2">b.2</option>
-        <option value="b.3">b.3</option>
-        <option value="b.4">b.4</option>
+        <option value="B.1">Moqdisho</option>
+        <option value="b.2">Hargeisa</option>
+        <option value="b.3">Garoowe</option>
+        <option value="b.4">Baydhabo</option>
       </select><br>
       <label for="category">Category:</label><br>
       <select id="category" name="category" style="width: 150px;">
-        <option value="home">Home</option>
-        <option value="clothing">Clothing</option>
-        <option value="electronics">Electronics</option>
+        <option value="home">Alaabta guriga</option>
+        <option value="clothing">Dhar</option>
+        <option value="electronics">Elektronik</option>
       </select>
       <br> </br>
       <!--collecting areas will be named after us-->
       <a href="Click here to know about collecting areas"></a>
-      <input placeholder="Phone number" type="text" id="phnmbr" name="lname" value=""><br></br>
-      <input class="input" rows="8" id="txtarea" class="inputText" placeholder="Descripe your product" style="height: 45px;"><br></br>
-      <button type="button" class="addbtn" id="btnadd">Ready for sale</button>
+      <input placeholder="Lambarkaaga" type="text" id="phnmbr" name="lname" value=""><br></br>
+      <input class="input" rows="8" id="txtarea" class="inputText" placeholder="Faah faahin alaabta iibka" style="height: 45px;"><br></br>
+      <button type="button" class="addbtn" id="btnadd">Iibi</button>
     </form>
   </form>
 
@@ -93,39 +93,35 @@
         
     <!-- <div class="textAndBttns"> -->
 
-      <div class="flex-containersrch">
+      <div class="flex-containersrch" >
       
-        <input class="searchBar" type="text" id="srchbar" placeholder="What are you looking for?" title="Type in a name">  </input> 
-        <button id="srchBtnn" class=" flex-itemsrch flex-shrink-1 searchBtnn">Search</button>
+        <input class="searchBar" type="text" id="srchbar" placeholder="Maxaad raadineeysa?" title="Type in a name">  </input> 
+        <button id="srchBtnn" class=" flex-itemsrch flex-shrink-1 searchBtnn">Raadi</button>
         <Button class="reset undobtn" id="resetbtn"> X </Button>
 
       </div>
-
-      <h2 style="margin-left: 14%; font: inherit; font-size: 30px;">Catogories</h2>
-
       <div class="flex-container">
-        <Button class="CatogoriButtn clothing-category" data-category="clothing"> Clothes</Button>
-        <Button class="CatogoriButtn electronics-category" data-category="electronics">Electronic</Button>
-        <Button class="CatogoriButtn home-category" data-category="home">Home</Button>
-        <Button class="CatogoriButtn view-all" data-category=""> Show all</Button>
+        <Button class="CatogoriButtn clothing-category" data-category="clothing"> Dhar</Button>
+        <Button class="CatogoriButtn electronics-category" data-category="electronics">Elektronik</Button>
+        <Button class="CatogoriButtn home-category" data-category="home">Guri</Button>
+        <Button class="CatogoriButtn view-all" data-category=""> Itus kuli</Button>
           </div>
+          <br>
+          <br>
 
-      <br></br>
-
-    <h2 id="section-title" style="margin-left: 14%; font: inherit; font-size: 30px;">Recent Items for sale </h2>
+        <!--<h2 id="section-title" style="margin-left: 14%; font: inherit; font-size: 30px; position: relative; bottom: 170px;">Alaabta u dambeeysay ee iibka ah </h2>-->
     
     
     
     <div class="CenterMiddle">
      <!--recent-->
      <div id="nosrchresult" style="display: none;">
-      <h3>Theres no result of the product you are looking for</h3>
     </div>
-     <div class="cardblokkdiv">
-       <!--section can be used to hide the card-->
+     <span id="Itemsale" class="cardblokkdiv">
+          <!--section can be used to hide the card-->
       <section id="cardarticle"> </section>
       
-    </div>
+     </span>
 
     <!-- </div> -->
     </div>
@@ -137,48 +133,41 @@
   
    
     <ul >
-      <h4>About</h4>
-      <li class="li" style="color: #f8690b;"><a href="http://scanfcode.com/category/c-language/" class="litxt" >About us</a></li>
-      <li class="li"><a href="http://scanfcode.com/category/front-end-development/" class="litxt">Savsale</a></li>
-      <li class="li"><a href="http://scanfcode.com/category/back-end-development/" class="litxt">Something</a></li>
+      <h4>Nagu saabsan</h4>
+      <li class="li" style="color: #f8690b;"><a href="http://scanfcode.com/category/c-language/" class="litxt" >Nagu saabsan</a></li>
     </ul>
   
  
   <ul >
-    <h4>Security</h4>
-    <li class="li"><a href="http://scanfcode.com/category/c-language/" class="litxt">Scam</a></li>
-    <li class="li"><a href="http://scanfcode.com/category/front-end-development/" class="litxt">Calls</a></li>
-    <li class="li"><a href="http://scanfcode.com/category/back-end-development/" class="litxt">Users</a></li>
+    <h4>Amaano</h4>
+    <li class="li"><a href="http://scanfcode.com/category/c-language/" class="litxt">Shirqool</a></li>
   </ul>
 
   <ul >
-    <h4>Sell</h4>
-    <li class="li"><a href="http://scanfcode.com/category/c-language/" class="litxt">How to sell</a></li>
-    <li class="li"><a href="http://scanfcode.com/category/front-end-development/" class="litxt">How does</a></li>
-    <li class="li"><a href="http://scanfcode.com/category/back-end-development/" class="litxt">somethin</a></li>
+    <h4>Iibka</h4>
+    <li class="li"><a href="http://scanfcode.com/category/c-language/" class="litxt">Sideen wax ku iibiya?</a></li>
   </ul>
 
   <ul >
-    <h4>Buy</h4>
-    <li class="li"><a href="http://scanfcode.com/category/c-language/" class="litxt">How to buy</a></li>
-    <li class="li"><a href="http://scanfcode.com/category/front-end-development/" class="litxt">Where do i get</a></li>
-    <li class="li"><a href="http://scanfcode.com/category/back-end-development/" class="litxt">Payment</a></li>
+    <h4>Adeega</h4>
+    <li class="li"><a href="http://scanfcode.com/category/c-language/" class="litxt">Sideen wax ku iibsadaa</a></li>
   </ul>
 
-  <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
-    <a href="#">Savsale</a>.
-       </p>
+  
   
 </div>
+<footer class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+  <a href="#">Savsale</a>.
+</footer>
 
  <!--overlay text-->
 
  <div id="overlay">
     
 
-  <h2 style="color: #f8690b; position: absolute; left: 40%; top: 10%;font-size: 55px">Click & get</h2>
-  <h5 style="color: white; position: absolute; left: 35%; top: 30%; font-size: 16px"> You are almost there, tell us about your contact information.<br></br> And we will reserve the product for you
-    .When your product is ready we will call you.
+  <h2 style="color: #f8690b; position: absolute; left: 40%; top: 10%;font-size: 55px">Click & Collect</h2>
+  <h5 style="color: white; position: absolute; left: 35%; top: 30%; font-size: 16px"> Iibkaaga wuu dhawyahay,Ino sheeg sida aan kula soo xiriiri karno
+    marka ay alaabtaada diyaar tahay.<br></br> Waa aan kula soo xiriirayna marka alaabtaada diyartahay
   </h5>
   <br> </br>
   <div class="buyerclass">
@@ -192,14 +181,14 @@
     <br></br>
 
     <select name="clctArea" id="buyerCollectArea" style="width: 150px;"><br>
-      <option value="B.1">b.1</option>
-      <option value="b.2">b.2</option>
-      <option value="b.3">b.3</option>
-      <option value="b.4">b.4</option>
+      <option value="B.1">Mogadishu</option>
+      <option value="b.2">Hargeisa</option>
+      <option value="b.3">Garoowe</option>
+      <option value="b.4">Baydhabo</option>
     </select>
     <br></br>
 
-    <button id="buy" class="buybtn">Buy</button>   <button id="cancel" class="buybtn"> Cancel </button>
+    <button id="buy" class="buybtn">Iibso</button>   <button id="cancel" class="buybtn"> Jooji </button>
   </form>
   </div>
 </div>

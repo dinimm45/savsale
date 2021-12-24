@@ -127,7 +127,7 @@
     deleteButtonElement.innerText = "x";
 
     hostElement.appendChild(buyButtonElement);
-    hostElement.appendChild(deleteButtonElement);
+    //hostElement.appendChild(deleteButtonElement);
     hostElement.appendChild(imgElememt);
     hostElement.appendChild(priceElement);
     hostElement.appendChild(nameElement);

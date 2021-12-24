@@ -11,7 +11,8 @@ body {
   position: relative;
   overflow: hidden;
   background-color: #ffffff00;
-  top: -25px;
+  bottom: 85px;
+  right: 5px;
 }
 
 .topnav a {
@@ -21,8 +22,7 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
-  
+  font-size: 20px;  
 }
 
 .topnav a:hover {
@@ -79,8 +79,8 @@ body {
   border: none;
   color: white;
   border-radius: 8px;
-  height: 42px;
-  width: 250px;
+  height: 40px;
+  width: 170px;
   position: flex;
 }
 
@@ -140,28 +140,30 @@ section#cardarticle {
   top: 11%;
   margin-left: 10%;
   margin-right: 10%;
-  max-width: 300px;
-  height: 67%;
+  width: 170px;
+  height: 75%;
   padding: 25px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
 }
 
 .imageContainer {
+   object-fit:contain;
+   object-position:50% 50%;
+  position: relative;
   display: flex;
   flex-grow: 1;
-  margin-left: auto;
-  margin-right: auto;
+  bottom: 11%;
   width: 100%;
-  height: 300px;
-  background-image: url(images/bikewllp.jpeg);
+  height: 490px;
+  background-image: url(images/tree.jpg);
   
 }
 
 .top-left {
   display: flex;
   position: absolute;
-  top: 345px;
+  bottom: 145px;
   left: 420px;
   color: #ffffff;
   margin-left: 3%; 
@@ -206,6 +208,8 @@ section#cardarticle {
 
 
 .CenterMiddle {
+  position: relative;
+  bottom: 32%;
   margin-left: 10%;
   margin-right: 10%;
   display: flex;
@@ -239,8 +243,7 @@ section#cardarticle {
   padding-right: 80px;
   text-align: center;
   width: auto;
-  margin-left: 40px;
-  bottom: 5%;
+  bottom: 28%;
 
 }
 
@@ -283,6 +286,7 @@ section#cardarticle {
   background-color: #f8690b;
   color: white;
   border: none;
+  bottom: 180px;
   left: 24%;
   margin-left: 30px;
   text-align: center;
@@ -304,25 +308,26 @@ section#cardarticle {
   box-shadow: 1px 1px;
   box-shadow: 0px 8px 16px #918f8f70;
   border: none;
-  width: 500px;
+  width: 495px;
   height: 45px;
   border-radius: 15px;
   margin-bottom: 50px;
   left: 25%;
+  bottom: 180px;
   
 }
 
 .reset {
-  margin-top: 55px;
-  position: absolute;
-  width: 40px;
-  height: 30px;
+  bottom: 121px;
+  position: relative;
+  width: 30px;
+  height: 25px;
   border-radius: 25px;
   font-size: medium;
   background-color: #f86a0b;
   color: white;
   border: none;
-  right: 71%;
+  right: 258px;
 }
 
 
@@ -442,11 +447,11 @@ button.CatogoriButtn.clothing-category:hover {
         
         }
 
-        .copyright-text
-{
-  margin:0
-  
-}
+        .copyright-text {
+          text-align: center;
+         
+
+      }
 
 
     
