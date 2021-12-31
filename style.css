@@ -11,7 +11,7 @@ body {
   position: relative;
   overflow: hidden;
   background-color: #ffffff00;
-  bottom: 85px;
+  bottom: 75px;
   right: 5px;
 }
 
@@ -240,9 +240,7 @@ section#cardarticle {
 .flex-container {
   position: relative;
   display: flex;
-  padding-right: 2px;
   text-align: center;
-  width: auto;
   bottom: 28%;
 
 }
@@ -327,7 +325,7 @@ section#cardarticle {
   background-color: #f86a0b;
   color: white;
   border: none;
-  right: 58px;
+  right: 28px;
 }
 
 
