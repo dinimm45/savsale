@@ -240,7 +240,7 @@ section#cardarticle {
 .flex-container {
   position: relative;
   display: flex;
-  padding-right: 80px;
+  padding-right: 2px;
   text-align: center;
   width: auto;
   bottom: 28%;
@@ -327,7 +327,7 @@ section#cardarticle {
   background-color: #f86a0b;
   color: white;
   border: none;
-  right: 258px;
+  right: 58px;
 }
 
 
