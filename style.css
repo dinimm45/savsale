@@ -193,11 +193,8 @@ section#cardarticle {
   width: 90px;
   height: 90px;
   border: none;
-  margin-right: 20px;
   margin-top: 20px;
   position: relative;
-  left: 25%;
-
   margin-left: 10px;
   text-decoration: none;
   display: inline-block;
@@ -285,7 +282,7 @@ section#cardarticle {
   color: white;
   border: none;
   bottom: 180px;
-  left: 24%;
+  left: 10%;
   margin-left: 30px;
   text-align: center;
 }
@@ -310,7 +307,7 @@ section#cardarticle {
   height: 45px;
   border-radius: 15px;
   margin-bottom: 50px;
-  left: 25%;
+  left: 20%;
   bottom: 180px;
   
 }
@@ -325,7 +322,7 @@ section#cardarticle {
   background-color: #f86a0b;
   color: white;
   border: none;
-  right: 28px;
+  right: 45px;
 }
 
 
